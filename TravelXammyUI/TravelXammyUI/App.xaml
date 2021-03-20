@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<prism:PrismApplication xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="http://prismlibrary.com"
+             x:Class="TravelXammyUI.App">
+  <Application.Resources>
+        <Style TargetType="Button">
+            <Setter Property="VisualStateManager.VisualStateGroups">
+                <VisualStateGroupList>
+                    <VisualStateGroup>
+                        <VisualState x:Name="DaySelected">
+                            <VisualState.Setters>
+                                <Setter Property="BackgroundColor" Value="#5654d6" />
+                                <Setter Property="TextColor" Value="White" />
+                                <Setter Property="Margin" Value="{OnPlatform Android='0', iOS='0,5'}" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="DayUnSelected">
+                            <VisualState.Setters>
+                                <Setter Property="TextColor" Value="Black" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateGroupList>
+            </Setter>
+        </Style>
+
+    </Application.Resources>
+</prism:PrismApplication>
