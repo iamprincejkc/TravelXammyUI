@@ -1,4 +1,5 @@
 ﻿using Android.App;
+using Android.Content;
 using Android.Content.PM;
 using Android.OS;
 using Android.Views;
@@ -26,6 +27,16 @@ namespace TravelXammyUI.Droid
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+        }
+        protected override void OnResume()
+        {
+            base.OnResume();
+            Xamarin.Essentials.Platform.OnResume(this);
+        }
+        protected override void OnNewIntent(Intent intent)
+        {
+            base.OnNewIntent(intent);
+            Xamarin.Essentials.Platform.OnNewIntent(intent);
         }
     }
 

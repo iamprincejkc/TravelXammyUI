@@ -26,6 +26,8 @@ namespace TravelXammyUI.iOS
 
             return base.FinishedLaunching(app, options);
         }
+        public override void PerformActionForShortcutItem(UIApplication application, UIApplicationShortcutItem shortcutItem, UIOperationHandler completionHandler)
+   => Xamarin.Essentials.Platform.PerformActionForShortcutItem(application, shortcutItem, completionHandler);
     }
 
     public class iOSInitializer : IPlatformInitializer
